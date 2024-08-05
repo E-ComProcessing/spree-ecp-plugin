@@ -1,0 +1,115 @@
+<div class="ecomprocessing-payment-gateway">
+  <div class="mb-4">
+    <div class="ecomprocessing-card-wrapper"></div>
+  </div>
+  <div class="payment-gateway-fields">
+    <div class="mb-1 payment-gateway-field checkout-content-inner-field">
+      <input type="text" name="payment_source[<%= payment_method.id %>][name]" id="ecp_name_on_card" value="" class="spree-flat-input" placeholder="Cardholder name">
+    </div>
+
+    <div class="mb-1 payment-gateway-field checkout-content-inner-field">
+      <input type="text" name="payment_source[<%= payment_method.id %>][number]" id="ecp_card_number" value="" class="spree-flat-input cardNumber" size="19" maxlength="19" autocomplete="off" placeholder="Card number">
+    </div>
+    <div class="payment-gateway-half-fields d-flex justify-content-between">
+      <div class="payment-gateway-field checkout-content-inner-field">
+        <input type="text" name="payment_source[<%= payment_method.id %>][expiry]" id="ecp_card_expiry" value="" class="spree-flat-input cardExpiry" placeholder="MM/YY">
+      </div>
+      <div class="payment-gateway-field checkout-content-inner-field">
+        <input type="text" name="payment_source[<%= payment_method.id %>][verification_value]" id="ecp_card_code" value="" class="spree-flat-input cardCode" size="5" placeholder="CVC">
+      </div>
+    </div>
+
+    <input type="hidden" name="payment_source[<%= payment_method.id %>][cc_type]" id="ecp_cc_type" value="" class="ccType">
+    <input name="payment_source[<%= payment_method.id %>][accept_header]"
+           type="hidden"
+           id="ecp_cc_3dsv2_accept_header"
+           value="*/*"
+    >
+    <input name="payment_source[<%= payment_method.id %>][java_enabled]"
+           type="hidden"
+           id="ecp_cc_3dsv2_java_enabled"
+           value=""
+    >
+    <input name="payment_source[<%= payment_method.id %>][language]"
+           type="hidden"
+           id="ecp_cc_3dsv2_language"
+           value=""
+    >
+    <input name="payment_source[<%= payment_method.id %>][color_depth]"
+           type="hidden"
+           id="ecp_cc_3dsv2_color_depth"
+           value=""
+    >
+    <input name="payment_source[<%= payment_method.id %>][screen_height]"
+           type="hidden"
+           id="ecp_cc_3dsv2_screen_height"
+           value=""
+    >
+    <input name="payment_source[<%= payment_method.id %>][screen_width]"
+           type="hidden"
+           id="ecp_cc_3dsv2_screen_width"
+           value=""
+    >
+    <input name="payment_source[<%= payment_method.id %>][time_zone_offset]"
+           type="hidden"
+           id="ecp_cc_3dsv2_time_zone_offset"
+           value=""
+    >
+    <input name="payment_source[<%= payment_method.id %>][user_agent]"
+           type="hidden"
+           id="ecp_cc_3dsv2_user_agent"
+           value=""
+    >
+
+  </div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(){
+        initBrowserParams()
+        initCreditCard()
+    });
+
+    function initCreditCard() {
+        new Card({
+            form: document.getElementById('checkout_form_payment'),
+            container: '.ecomprocessing-card-wrapper',
+            formSelectors: {
+                nameInput: '#ecp_name_on_card',
+                numberInput: '#ecp_card_number',
+                expiryInput: '#ecp_card_expiry',
+                cvcInput: '#ecp_card_code'
+            },
+            messages: {
+                legalText: '&copy;<%= (DateTime.now).strftime('%Y') %> Ecomprocessing'
+            },
+            width: (window.innerWidth > 400) ? 300 : 180,
+            debug: false,
+            // Default values for rendered fields - options*}
+            values: {
+                number: '•••• •••• •••• ••••',
+                name: 'Full Name',
+                expiry: '••/••',
+                cvc: '***'
+            }
+        });
+    }
+
+    function initBrowserParams() {
+        document.getElementById('ecp_cc_3dsv2_java_enabled').value         = fetchJavaEnabled()
+        document.getElementById('ecp_cc_3dsv2_color_depth').value          = screen.colorDepth.toString()
+        document.getElementById('ecp_cc_3dsv2_language').value             = navigator.language
+        document.getElementById('ecp_cc_3dsv2_screen_height').value        = screen.height.toString()
+        document.getElementById('ecp_cc_3dsv2_screen_width').value         = screen.width.toString()
+        document.getElementById('ecp_cc_3dsv2_time_zone_offset').value     = (new Date()).getTimezoneOffset().toString()
+        document.getElementById('ecp_cc_3dsv2_user_agent').value           = navigator.userAgent
+    }
+
+    function fetchJavaEnabled() {
+        try {
+            return navigator.javaEnabled();
+        } catch (e) {
+            return false;
+        }
+    }
+</script>

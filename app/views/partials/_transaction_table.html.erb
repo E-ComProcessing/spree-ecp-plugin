@@ -1,0 +1,34 @@
+<fieldset data-hook="ecomprocessing_gateway_payments">
+  <% if payment.ecomprocessing_payments.count > 0 %>
+    <legend><%= "#{payment.payment_method.name} #{I18n.t('ecomprocessing.payments_table.title')}" %></legend>
+    <div class="table-responsive border rouded bg-white mb-3">
+      <table class="table table-condensed">
+        <tr>
+          <th><%= I18n.t('ecomprocessing.payments_table.unique_id') %></th>
+          <th><%= I18n.t('ecomprocessing.payments_table.reference_id') %></th>
+          <th><%= I18n.t('ecomprocessing.payments_table.status') %></th>
+          <th><%= I18n.t('ecomprocessing.payments_table.transaction_type') %></th>
+          <th><%= I18n.t('ecomprocessing.payments_table.mode') %></th>
+          <th><%= I18n.t('ecomprocessing.payments_table.amount') %></th>
+          <th><%= I18n.t('ecomprocessing.payments_table.currency') %></th>
+          <th><%= I18n.t('ecomprocessing.payments_table.created_at') %></th>
+          <th><%= I18n.t('ecomprocessing.payments_table.updated_at') %></th>
+        </tr>
+
+        <% payment.ecomprocessing_payments.each do |ecomprocessing_payment| %>
+          <tr>
+            <td><%= ecomprocessing_payment.unique_id %></td>
+            <td><%= ecomprocessing_payment.reference_id %></td>
+            <td><%= ecomprocessing_payment.status %></td>
+            <td><%= ecomprocessing_payment.transaction_type %></td>
+            <td><%= ecomprocessing_payment.mode %></td>
+            <td><%= ecomprocessing_payment.major_amount %></td>
+            <td><%= ecomprocessing_payment.currency %></td>
+            <td><%= ecomprocessing_payment.formatted_created_at %></td>
+            <td><%= ecomprocessing_payment.formatted_updated_at %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  <% end %>
+</fieldset>

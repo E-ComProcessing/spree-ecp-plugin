@@ -1,0 +1,145 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  ecomprocessing:
+    preferences:
+      production: Production
+      sandbox: Sandbox
+      authorize: Authorize
+      authorize3d: Authorize3D
+      sale: Sale
+      sale3d: Sale3D
+      no_preference: No Preference
+      no_challenge_requested: No Challenge Requested
+      preference: Preference
+      mandate: Mandate
+      account_verification: Account Verification
+      argencard: Argencard
+      apple_pay: Apple Pay
+      aura: Aura
+      baloto: Baloto
+      bancomer: Bancomer
+      bcmc: Bcmc
+      banco_de_occidente: Banco de Occidente
+      banco_do_brasil: Banco do Brasil
+      bitpay_payout: Bitpay Payout
+      bitpay_sale: Bitpay Sale
+      boleto: Boleto
+      bradesco: Bradesco
+      cabal: Cabal
+      cashu: Cashu
+      cencosud: Cencosud
+      davivienda: Davivienda
+      efecty: Efecty
+      elo: Elo
+      eps: Eps
+      ezeewallet: eZeeWallet
+      fashioncheque: Fashioncheque
+      giropay: Giropay
+      google_pay: Google Pay
+      ideal: Ideal
+      idebit_payin: Idebit Payin
+      insta_debit_payin: Insta Debit Payin
+      intersolve: Intersolve
+      itau: Itau
+      multibanco: Multibanco
+      my_bank: My Bank
+      naranja: Naranja
+      nativa: Nativa
+      neosurf: Neosurf
+      neteller: Neteller
+      online_banking: Online Banking
+      oxxo: Oxxo
+      p24: P24
+      pago_facil: Pago Facil
+      pay_pal: Pay Pal
+      paysafecard: Paysafecard
+      payu: PayU
+      pix: Pix
+      poli: Poli
+      post_finance: Post Finance
+      pse: PSE
+      rapi_pago: Rapi Pago
+      redpagos: RedPagos
+      russian_mobile_sale: Russian Mobile Sale
+      safetypay: Safetypay
+      santander: Santander
+      sdd_init_recurring_sale: SDD Init Recurring Sale
+      sdd_sale: SDD Sale
+      tarjeta_shopping: Tarjeta Shopping
+      container_store: Container Store
+      trustly_sale: Trustly Sale
+      upi: Upi
+      webmoney: Webmoney
+      webpay: Webpay
+      wechat: Wechat
+      google_pay_authorize: Google Pay (Authorize)
+      google_pay_sale: Google Pay (Sale)
+      apple_pay_authorize: Apple Pay (Authorize)
+      apple_pay_sale: Apple Pay (Sale)
+      pay_pal_authorize: Pay Pal (Authorize)
+      pay_pal_sale: Pay Pal (Sale)
+      pay_pal_express: Pay Pal (Express)
+      ar: Arabic
+      bg: Bulgarian
+      de: German
+      en: English
+      es: Spanish
+      fr: French
+      hi: Hindu
+      ja: Japanese
+      is: Icelandic
+      it: Italian
+      nl: Dutch
+      pt: Portuguese
+      pl: Polish
+      ru: Russian
+      tr: Turkish
+      zh: Mandarin Chinese
+      id: Indonesian
+      ms: Malay
+      th: Thai
+      cs: Czech
+      hr: Croatian
+      sl: Slovenian
+      fi: Finnish
+      "no": Norwegian
+      da: Danish
+      sv: Swedish
+    payment:
+      usage: Electronic transaction via Spree eCommerce platform
+      reference: Reference transaction via Spree eCommerce platform
+    payments_table:
+      gateway_response: Gateway Response
+      title: Payments
+      unique_id: UniqueId
+      reference_id: ReferenceId
+      status: Status
+      transaction_type: TransactionType
+      mode: Mode
+      amount: Amount
+      currency: Currency
+      created_at: Created
+      updated_at: Updated
+      message: Message
+      technical_message: Technical Message
+      checkout_source: Checkout source
+      source_name: Name
+      source_consumer_id: Consumer ID
+      source_consumer_email: Consumer Email
+      source_custom_attributes: Custom Attributes
+  spree:
+    token: Token
+    username: Username
+    password: Password
+    transaction_types: Transaction Types
+    return_success_url: Return Success URL
+    return_failure_url: Return Failure URL
+    return_cancel_url: Return Cancel URL
+    return_pending_url: Return Pending URL
+    challenge_indicator: Challenge Indicator
+    hostname: Hostname
+    threeds_allowed: Threeds V2 parameters handling
+    enabled: Enabled
+    disabled: Disabled

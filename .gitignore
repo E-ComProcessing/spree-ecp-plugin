@@ -1,0 +1,14 @@
+.DS_Store
+/.bundle/
+/doc/
+/log/*.log
+/pkg/
+/tmp/
+.byebug_history
+.idea
+spree_ecomprocessing_genesis*.gem
+coverage
+rspec_report.xml
+rubocop_report.txt
+/spec/dummy
+.env
