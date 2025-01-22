@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    spree_ecomprocessing_genesis (0.1.8)
+    spree_ecomprocessing_genesis (0.2.0)
       genesis_ruby (= 0.1.7)
       securerandom
       spree_backend (>= 4.4.0)

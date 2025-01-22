@@ -1,3 +1,9 @@
+0.2.0
+-----
+**Features**:
+
+* Deprecated e-comprocessing Gateway Module for Spree eCommerce
+
 0.1.8
 -----
 **Features**:

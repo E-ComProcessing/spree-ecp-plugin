@@ -1,3 +1,5 @@
+\*CAUTION\* The e-comprocessing Gateway Module Plugin for Spree is deprecated and will no longer receive updates.
+=============================
 ecomprocessing Genesis Gateway for Spree
 ===========
 [![Gem Version](https://badge.fury.io/rb/spree_ecomprocessing_genesis.svg)](https://badge.fury.io/rb/spree_ecomprocessing_genesis)
